@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <title>Zadanie domowe #4 GOIT POLSKA</title>
+    <title>Zadanie domowe #5 GOIT POLSKA</title>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
@@ -21,30 +21,36 @@
 
     <header class="header">
         <div class="container">
+            <a class="main-logo link" href="./index.html"><span>Web</span>Studio</a>
             <nav class="navigation">
-                <a class="main-logo link" href="./index.html"><span>Web</span>Studio</a>
                 <ul class="navigation_list list">
-                    <li class="navigation_list-item"><a href="#" class="navigation_list-item-link link">Agencja</a></li>
-                    <li class="navigation_list-item"><a href="./portfolio.html"
-                            class="navigation_list-item-link link">Portfolio</a></li>
-                    <li class="navigation_list-item"><a href="#" class="navigation_list-item-link link">Kontakt</a></li>
+                    <li class="navigation_list-item active_page">
+                        <a href="./index.html" class="navigation_list-item-link link">Agencja</a>
+                    </li>
+                    <li class="navigation_list-item ">
+                        <a href="./portfolio.html" class="navigation_list-item-link link">Portfolio</a>
+                    </li>
+                    <li class="navigation_list-item">
+                        <a href="#" class="navigation_list-item-link link">Kontakt</a>
+                    </li>
                 </ul>
 
-                <ul class="navigation_list list">
-                    <li class="navigation_list-item">
-                        <a href="mailto:info@devstudio.com"
-                            class="navigation_list-item-link link navigation_list-item-link-contact">
-                            <svg class="icon icon-envelope icon-header">
-                                <use xlink:href="./images/symbol-defs.svg#envelope" />
-                            </svg>info@devstudio.com</a>
-                    </li>
-                    <li class="navigation_list-item"><a href="tel:+48111111111"
-                            class="navigation_list-item-link link navigation_list-item-link-contact">
-                            <svg class="icon icon-smartphone icon-header">
-                                <use xlink:href=" ./images/symbol-defs.svg#smartphone" />
-                            </svg>+48 111 111 111</a></li>
-                </ul>
             </nav>
+            <ul class="navigation_list-contact list">
+                <li class="navigation_list-item">
+                    <a href="mailto:info@devstudio.com"
+                        class="navigation_list-item-link link navigation_list-item-link-contact">
+                        <svg class="icon icon-envelope icon-header">
+                            <use xlink:href="./images/symbol-defs.svg#envelope" />
+                        </svg>info@devstudio.com</a>
+                </li>
+                <li class="navigation_list-item">
+                    <a href="tel:+48111111111" class="navigation_list-item-link link navigation_list-item-link-contact">
+                        <svg class="icon icon-smartphone icon-header">
+                            <use xlink:href=" ./images/symbol-defs.svg#smartphone" />
+                        </svg>+48 111 111 111</a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -55,7 +61,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-text">EFEKTYWNE ROZWIĄZANIA<br> DLA WASZEGO BIZNESU</h1>
-                <button class="hero-btn" type="button">Zamów usługę</button>
+                <button class="hero-btn" type="button" data-modal-open>Zamów usługę</button>
             </div>
         </section>
 
@@ -122,16 +128,24 @@
         <section class="about">
             <div class="container">
 
+
                 <h2 class="main-header">Czym się zajmujemy</h2>
                 <ul class="about_list-img">
-                    <li class="about_list-img-item list"><img src="./images//main/box1.jpg" alt="Aplikacje na tablety"
-                            width="370" height="294"></li>
+                    <li class="about_list-img-item list">
+                        <img src="./images//main/box1.jpg" alt="Aplikacje na tablety" width="370" height="294">
+                        <p class="about_list-describe">APLIKACJE KOMPUTEROWE</p>
+                    </li>
                     <li class="about_list-img-item list"><img src="./images//main/box2.jpg" alt="Aplikacje na komputery"
-                            width="370" height="294"></li>
+                            width="370" height="294">
+                        <p class="about_list-describe">APLIKACJE MOBILNE</p>
+                    </li>
                     <li class="about_list-img-item list"><img src="./images//main/box3.jpg"
-                            alt="Aplikacje na urządzenia mobilne" width="370" height="294"></li>
+                            alt="Aplikacje na urządzenia mobilne" width="370" height="294">
+                        <p class="about_list-describe">ROZWIĄZANIA GRAFICZNE</p>
+                    </li>
                 </ul>
             </div>
+
         </section>
 
         <!-- -----OUR TEAM----- -->
@@ -395,6 +409,15 @@
         </div>
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+
+        <div class="modal">
+            <div class="modal-btn">
+                <button type="button" class="close-btn" data-modal-close>x</button>
+            </div>
+        </div>
+
+    </div>
 
     <script src="./js/modal.js"></script>
 </body>
