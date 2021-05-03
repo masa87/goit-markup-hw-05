@@ -676,11 +676,10 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     position: absolute;
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
-    color: #000;
+    color: #fff;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.556;
@@ -692,7 +691,8 @@ img {
 }
 
 .main_section-card-list-item-top-description p {
-    text-align: center;
+    padding-left: 24px;
+    padding-right: 45px;
 }
 
 .main_section-card-list-item:hover,
